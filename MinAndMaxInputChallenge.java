@@ -12,6 +12,7 @@ public class MinAndMaxInputChallenge {
         Scanner scanner = new Scanner(System.in);
 
         int max = 0, min = 0;
+        boolean first = true;
 
         while (true) {
 
@@ -21,9 +22,10 @@ public class MinAndMaxInputChallenge {
 
                 int number = scanner.nextInt();
 
-                if(max == 0 && min == 0) {
+                if(first) {
                     max = number;
                     min = number;
+                    first = false;
                 }
 
                 if (number > max) {
@@ -38,7 +40,6 @@ public class MinAndMaxInputChallenge {
                 break;
             }
 
-            System.out.println("Min number: " + min + " Max number: " + max);
             scanner.nextLine(); // handle key press (enter)
         }
         System.out.println("Min number: " + min + " Max number: " + max);
