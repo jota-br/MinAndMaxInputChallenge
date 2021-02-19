@@ -11,8 +11,8 @@ public class MinAndMaxInputChallenge {
 
         Scanner scanner = new Scanner(System.in);
 
-        int max = 0, min = 0;
-        boolean first = true;
+        int max = Integer.MIN_VALUE, min = Integer.MAX_VALUE;
+//        boolean first = true;
 
         while (true) {
 
@@ -22,15 +22,16 @@ public class MinAndMaxInputChallenge {
 
                 int number = scanner.nextInt();
 
-                if(first) {
-                    max = number;
-                    min = number;
-                    first = false;
-                }
+//                if(first) {
+//                    max = number;
+//                    min = number;
+//                    first = false;
+//                }
 
                 if (number > max) {
                     max = number;
-                } else if (number < min) {
+                }
+                if (number < min) {
                     min = number;
                 }
 
